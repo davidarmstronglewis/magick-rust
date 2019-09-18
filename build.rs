@@ -101,6 +101,7 @@ fn main() {
             .ctypes_prefix("libc")
             .raw_line("extern crate libc;")
             .header(gen_h_path.to_str().unwrap())
+            .trust_clang_mangling(false)
             // https://github.com/rust-lang-nursery/rust-bindgen/issues/687
             .blacklist_type("FP_NAN")
             .blacklist_type("FP_INFINITE")
